@@ -50,7 +50,7 @@ export default function Navbar() {
             Products
           </Link>
           <Link href="/vegetable" className="hover:text-[#08D9D6]">
-            Categories
+            Brands
           </Link>
           <Link href="/beverages" className="hover:text-[#08D9D6]">
             Stores

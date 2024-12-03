@@ -1,6 +1,8 @@
 import Navbar from "@/pages/navbar";
 import CarouselMenon from "@/pages/carousel";
 import Step from "@/pages/step";
+import Brand from "@/pages/brand";
+import Banner from "@/pages/banner";
 import Footer from "@/pages/footer";
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
       <Navbar />
       <CarouselMenon />
       <Step />
+      <Brand />
+      <Banner />
       <Footer />
     </div>
   );

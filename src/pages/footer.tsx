@@ -18,9 +18,9 @@ export default function Footer() {
               />
             </Link>
             <p className="text-xs">
-              Menon Shoes memastikan belanja nyaman, aman, dan cepat, dengan
+              {`Menon Shoes memastikan belanja nyaman, aman, dan cepat, dengan
               registrasi mudah, pembayaran fleksibel, dan pengiriman tepat
-              waktu.
+              waktu.`}
             </p>
           </div>
           <div>
