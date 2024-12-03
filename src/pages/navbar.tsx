@@ -43,19 +43,19 @@ export default function Navbar() {
           <Link href="/" className="hover:text-[#08D9D6]">
             Home
           </Link>
-          <Link href="/shop" className="hover:text-[#08D9D6]">
+          <Link href="/about" className="hover:text-[#08D9D6]">
             About
           </Link>
-          <Link href="/fruit" className="hover:text-[#08D9D6]">
+          <Link href="/products" className="hover:text-[#08D9D6]">
             Products
           </Link>
-          <Link href="/vegetable" className="hover:text-[#08D9D6]">
+          <Link href="/brands" className="hover:text-[#08D9D6]">
             Brands
           </Link>
-          <Link href="/beverages" className="hover:text-[#08D9D6]">
+          <Link href="/stores" className="hover:text-[#08D9D6]">
             Stores
           </Link>
-          <Link href="/about-us" className="hover:text-[#08D9D6]">
+          <Link href="/contact" className="hover:text-[#08D9D6]">
             Contact
           </Link>
         </div>

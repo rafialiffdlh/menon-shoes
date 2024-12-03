@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 export default function Step() {
   const steps = [
     {
@@ -41,9 +41,11 @@ export default function Step() {
             className="flex flex-col items-center text-center p-4 w-1/2 md:w-1/4"
           >
             <div className="w-20 h-20">
-              <img
+              <Image
                 src={step.image}
                 alt={step.title}
+                height={200}
+                width={200}
                 className="object-contain w-full h-full"
               />
             </div>
