@@ -38,7 +38,7 @@ const carouselItems = [
   },
 ];
 
-export function CarouselMenon() {
+export default function CarouselMenon() {
   const plugin = React.useRef(
     Autoplay({ delay: 1000, stopOnInteraction: true })
   );
