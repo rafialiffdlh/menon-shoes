@@ -9,16 +9,18 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="bg-[#CBF1F5] text-white">
+    <nav className="bg-[#71C9CE] text-white">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <div className="flex items-center space-x-2">
-          <Image
-            src="/image/menon.png"
-            alt="Logo"
-            width={230}
-            height={220}
-            className=""
-          />
+          <Link href="/" className="hover:text-[#08D9D6]">
+            <Image
+              src="/image/menon.png"
+              alt="Logo"
+              width={230}
+              height={220}
+              className=""
+            />
+          </Link>
         </div>
 
         <div className="flex flex-1 mx-4">
@@ -38,14 +40,8 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className="bg-[#A6E3E9]">
+      <div className="bg-[#71C9CE]">
         <div className="container mx-auto flex justify-center space-x-6 py-2 text-sm">
-          <Link href="/" className="hover:text-[#08D9D6]">
-            Home
-          </Link>
-          <Link href="/about" className="hover:text-[#08D9D6]">
-            About
-          </Link>
           <Link href="/products" className="hover:text-[#08D9D6]">
             Products
           </Link>

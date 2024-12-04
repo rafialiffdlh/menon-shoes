@@ -3,6 +3,7 @@ export interface Product {
   description: string;
   price: string;
   image: string;
+  brand: string;
 }
 
 export const productsData = {
@@ -31,23 +32,9 @@ export const productsData = {
     {
       title: "nike 2",
       description: "nike 2",
-      price: "Rp 500.000",
+      price: "Rp 400.000",
       image: "/image/nike.jpg",
       brand: "Nike",
-    },
-  ],
-  nike: [
-    {
-      title: "nike 1",
-      description: "nike 1",
-      price: "Rp 500.000",
-      image: "/image/watcher_of_realms_tile.png",
-    },
-    {
-      title: "nike 2",
-      description: "nike 2",
-      price: "Rp 500.000",
-      image: "/image/goddess-paradise-tile.png",
     },
   ],
 };
