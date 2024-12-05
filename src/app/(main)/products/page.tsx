@@ -8,22 +8,20 @@ import Image from "next/image";
 
 export default function ProductsPage() {
   const [selectedBrand, setSelectedBrand] = useState<string | null>(null);
-  const [selectedPriceOrder, setSelectedPriceOrder] =
-    useState<string>("low-high");
+  const [selectedPriceRange, setSelectedPriceRange] = useState<
+    [number, number]
+  >([0, 1000000]);
 
   const brands = Array.from(new Set(productsData.product.map((p) => p.brand)));
+  const filteredProducts = productsData.product.filter((product) => {
+    const price = parseInt(product.price.replace(/[^0-9]/g, ""), 10);
 
-  const filteredProducts = productsData.product
-    .filter((product) => {
-      return selectedBrand ? product.brand === selectedBrand : true;
-    })
-    .sort((a, b) => {
-      const priceA = parseFloat(a.price.replace(/[^0-9.-]+/g, ""));
-      const priceB = parseFloat(b.price.replace(/[^0-9.-]+/g, ""));
-      return selectedPriceOrder === "low-high"
-        ? priceA - priceB
-        : priceB - priceA;
-    });
+    return (
+      (!selectedBrand || product.brand === selectedBrand) &&
+      price >= selectedPriceRange[0] &&
+      price <= selectedPriceRange[1]
+    );
+  });
 
   return (
     <div>
@@ -34,8 +32,8 @@ export default function ProductsPage() {
             brands={brands}
             selectedBrands={[selectedBrand ?? ""]}
             onBrandChange={(brand) => setSelectedBrand(brand)}
-            selectedPriceOrder={selectedPriceOrder}
-            onPriceOrderChange={(order) => setSelectedPriceOrder(order)}
+            selectedPriceRange={selectedPriceRange}
+            onPriceRangeChange={(range) => setSelectedPriceRange(range)}
           />
         </div>
 

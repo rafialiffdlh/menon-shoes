@@ -1,26 +1,21 @@
 import React from "react";
 import { Checkbox } from "@/components/ui/checkbox";
-import {
-  Select,
-  SelectTrigger,
-  SelectContent,
-  SelectItem,
-} from "@/components/ui/select";
-
+import { Slider } from "@radix-ui/react-slider";
+import * as SliderPrimitive from "@radix-ui/react-slider";
 interface FilterSidebarProps {
   brands: string[];
   selectedBrands: string[];
   onBrandChange: (brand: string) => void;
-  selectedPriceOrder: string;
-  onPriceOrderChange: (order: string) => void;
+  selectedPriceRange: [number, number];
+  onPriceRangeChange: (range: [number, number]) => void;
 }
 
 export default function FilterSidebar({
-  brands = [], // Default value
+  brands = [],
   selectedBrands = [],
   onBrandChange,
-  selectedPriceOrder = "low-high", // Default value
-  onPriceOrderChange,
+  selectedPriceRange = [0, 100],
+  onPriceRangeChange,
 }: FilterSidebarProps) {
   return (
     <div className="p-4 w-full md:w-64 bg-white shadow-lg rounded-md">
@@ -44,20 +39,35 @@ export default function FilterSidebar({
       </div>
 
       <div className="mb-6">
-        <h4 className="text-sm font-semibold mb-2">Sort by Price</h4>
-        <Select value={selectedPriceOrder} onValueChange={onPriceOrderChange}>
-          <SelectTrigger className="w-full text-sm">
-            <span>
-              {selectedPriceOrder === "low-high"
-                ? "Low to High"
-                : "High to Low"}
-            </span>
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="low-high">Low to High</SelectItem>
-            <SelectItem value="high-low">High to Low</SelectItem>
-          </SelectContent>
-        </Select>
+        <h4 className="text-sm font-semibold mb-2">Price Range</h4>
+        <div className="flex flex-col space-y-2">
+          <Slider
+            className="relative flex items-center w-full h-4"
+            value={selectedPriceRange}
+            onValueChange={(value) =>
+              onPriceRangeChange(value as [number, number])
+            }
+            min={33}
+            max={10000000}
+            step={1}
+          >
+            <SliderPrimitive.Track className="relative h-2 bg-gray-200 rounded-full grow">
+              <SliderPrimitive.Range className="absolute h-full bg-black rounded-full" />
+            </SliderPrimitive.Track>
+            <SliderPrimitive.Thumb
+              className="block w-4 h-4 bg-white border-2 border-black rounded-full shadow-md focus:outline-none"
+              aria-label="Minimum Price"
+            />
+            <SliderPrimitive.Thumb
+              className="block w-4 h-4 bg-white border-2 border-black rounded-full shadow-md focus:outline-none"
+              aria-label="Maximum Price"
+            />
+          </Slider>
+          <div className="flex justify-between text-xs">
+            <span>Rp {selectedPriceRange[0].toLocaleString()}</span>
+            <span>Rp {selectedPriceRange[1].toLocaleString()}</span>
+          </div>
+        </div>
       </div>
     </div>
   );

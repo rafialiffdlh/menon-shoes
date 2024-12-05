@@ -42,6 +42,9 @@ export default function Navbar() {
 
       <div className="bg-[#71C9CE]">
         <div className="container mx-auto flex justify-center space-x-6 py-2 text-sm">
+          <Link href="/about" className="hover:text-[#08D9D6]">
+            About
+          </Link>
           <Link href="/products" className="hover:text-[#08D9D6]">
             Products
           </Link>
@@ -49,7 +52,7 @@ export default function Navbar() {
             Brands
           </Link>
           <Link href="/stores" className="hover:text-[#08D9D6]">
-            Stores
+            Blog
           </Link>
           <Link href="/contact" className="hover:text-[#08D9D6]">
             Contact
