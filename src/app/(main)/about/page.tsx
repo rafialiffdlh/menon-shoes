@@ -142,7 +142,7 @@ export default function Page() {
             {`Temukan kenyamanan dan gaya sejati dengan Menon Shoes. Setiap
             langkah adalah sebuah cerita.`}
           </p>
-          <button className="btn btn-primary btn-lg">Jelajahi Koleksi</button>
+          <button className="btn bg-[#08D9D6] btn-lg">Jelajahi Koleksi</button>
         </section>
       </div>
       <Footer />

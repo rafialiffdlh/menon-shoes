@@ -48,10 +48,7 @@ export default function Navbar() {
           <Link href="/products" className="hover:text-[#08D9D6]">
             Products
           </Link>
-          <Link href="/brands" className="hover:text-[#08D9D6]">
-            Brands
-          </Link>
-          <Link href="/stores" className="hover:text-[#08D9D6]">
+          <Link href="/blog" className="hover:text-[#08D9D6]">
             Blog
           </Link>
           <Link href="/contact" className="hover:text-[#08D9D6]">

@@ -11,11 +11,9 @@ export default function ProductsPage() {
   const [selectedPriceRange, setSelectedPriceRange] = useState<
     [number, number]
   >([0, 1000000]);
-
   const brands = Array.from(new Set(productsData.product.map((p) => p.brand)));
   const filteredProducts = productsData.product.filter((product) => {
     const price = parseInt(product.price.replace(/[^0-9]/g, ""), 10);
-
     return (
       (!selectedBrand || product.brand === selectedBrand) &&
       price >= selectedPriceRange[0] &&
@@ -36,7 +34,6 @@ export default function ProductsPage() {
             onPriceRangeChange={(range) => setSelectedPriceRange(range)}
           />
         </div>
-
         <main className="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
           {filteredProducts.map((product) => (
             <div

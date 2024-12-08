@@ -12,7 +12,6 @@ export default function ContactPage() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
       </div>
-
       <div className="max-w-6xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
         <div>
           <form className="bg-white p-8 shadow-md rounded-2xl">
