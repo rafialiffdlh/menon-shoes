@@ -1,12 +1,11 @@
-import React from "react";
-import Navbar from "@/pages/navbar";
 import Footer from "@/pages/footer";
+import Navbar from "@/pages/navbar";
 export default function ContactPage() {
   return (
     <div className="bg-gray-100">
       <Navbar />
 
-      <div className="text-center py-16 bg-teal-50">
+      <div className="text-center py-16 ">
         <h1 className="text-4xl font-bold">Contact Us</h1>
         <p className="mt-4 text-gray-600">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.

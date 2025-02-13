@@ -45,11 +45,11 @@ export default function Page() {
               </div>
               <div className="flex justify-center">
                 <Image
-                  src=""
-                  alt="Menon Shoes Workshop"
-                  height={50}
-                  width={50}
-                  className="rounded-lg shadow-lg"
+                  src="/image/menon.png"
+                  alt="Menon Shoes"
+                  height={300}
+                  width={300}
+                  className="w-full h-full "
                 />
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function Page() {
             {`Temukan kenyamanan dan gaya sejati dengan Menon Shoes. Setiap
             langkah adalah sebuah cerita.`}
           </p>
-          <button className="btn bg-[#08D9D6] btn-lg">Jelajahi Koleksi</button>
+          <button className="btn bg-[#71C9CE] btn-lg">Jelajahi Koleksi</button>
         </section>
       </div>
       <Footer />

@@ -24,8 +24,8 @@ export default function ProductsPage() {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-col md:flex-row">
-        <div className="w-full md:w-auto">
+      <div className="container mx-auto flex items-center justify-between py-4 flex-col md:flex-row">
+        <div className="w-full md:w-auto px-4">
           <FilterSidebar
             brands={brands}
             selectedBrands={[selectedBrand ?? ""]}

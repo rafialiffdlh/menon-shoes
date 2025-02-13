@@ -10,12 +10,12 @@ export default function Brand() {
       <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 justify-items-center">
         {brandsData.allBrand.map((brand, index) => (
           <div key={index} className="flex flex-col items-center">
-            <div className="w-24 h-24 bg-gray-200 rounded-full overflow-hidden">
+            <div className="w-24 h-24 flex items-center justify-center  rounded-full overflow-hidden">
               <Image
                 src={brand.image}
                 alt={brand.title}
-                width={230}
-                height={230}
+                width={300}
+                height={300}
                 className="w-full h-full object-cover"
               />
             </div>

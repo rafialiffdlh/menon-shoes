@@ -16,22 +16,22 @@ import Autoplay from "embla-carousel-autoplay";
 
 const carouselItems = [
   {
-    title: "adidas",
-    description: "adidas",
+    title: "Adidas",
+    description: "",
     buttonText: "view product",
     buttonLink: "/carts",
     image: "/image/adidas.jpg",
   },
   {
-    title: "nike",
-    description: "nike",
+    title: "Nike",
+    description: "",
     buttonText: "view product",
     buttonLink: "/produce",
     image: "/image/nike.jpg",
   },
   {
-    title: "puma",
-    description: "puma",
+    title: "Puma",
+    description: "",
     buttonText: "view product",
     buttonLink: "/local",
     image: "/image/puma.jpg",

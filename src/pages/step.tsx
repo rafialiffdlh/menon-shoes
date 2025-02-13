@@ -7,28 +7,28 @@ export default function Step() {
       title: "Filter & Discover",
       description: "Smart filtering and suggestions make it easy to find",
       color: "bg-red-100 text-red-600",
-      image: "",
+      image: "/image/kategori.jpg",
     },
     {
       step: "Step 2",
       title: "Add to bag",
       description: "Easily select the correct items and add them to the cart",
       color: "bg-blue-100 text-blue-600",
-      image: "",
+      image: "/image/cart.jpg",
     },
     {
       step: "Step 3",
       title: "Fast Shipping",
       description: "The carrier will confirm and ship quickly to you",
       color: "bg-yellow-100 text-yellow-600",
-      image: "",
+      image: "/image/shipping.jpg",
     },
     {
       step: "Step 4",
       title: "Enjoy the product",
       description: "Have fun and enjoy your 5-star quality products",
       color: "bg-purple-100 text-purple-600",
-      image: "",
+      image: "/image/product.jpg",
     },
   ];
 
